@@ -20,5 +20,9 @@ body {
   border-radius: 100%;
   width: 700px;
   height: 700px;
+}
 
+.blue {
+  grid-area: blue;
+  background-color: blue;
 }
