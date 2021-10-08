@@ -43,5 +43,9 @@ body {
 .green {
   grid-area: verde;
   background-color: green;
-  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.selected {
+  opacity: 0.8;
 }
