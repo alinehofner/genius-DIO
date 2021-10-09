@@ -29,16 +29,16 @@ let lightColor = (element, number) => {
   }, number - 250);
   setTimeout(() => {
     element.classList.remove('selected');
-  },);
+  });
 }
 
 let checkOrder = () => {
-  for (let i in clickedOrder ) {
-    if (clickedOrder[i] !== order[i]) {
+  for (let i in clickOrder ) {
+    if (clickedOrder[i] != order[i]) {
       gameOver();
       break;
     }
-  } if (clickedOrder.length == order.length) {
+  } if (clickOrder.length == order.length) {
     alert(`Pontuação: $(score)\nVocê acertou! Iniciando próximo nível! `);
     nextLevel();
   }
@@ -78,13 +78,13 @@ let gameOver = () => {
 }
 
 let playGame = () => {
-  alert('Bem-vindo ao Gênesis! Iniciando novo jogo');
+  alert('Bem-vindo ao Genius! Iniciando novo jogo');
   score = 0;
   nextLevel();
 }
 
-green.onClick = () => click[0];
-red.onClick = () => click[1];
-yellow.onClick = () => click[2];
-blue.onClick = () => click[3];
+green.onClick = () => click(0);
+red.onClick = () => click(1);
+yellow.onClick = () => click(2);
+blue.onClick = () => click(3);
 playGame();
