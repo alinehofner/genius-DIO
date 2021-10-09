@@ -3,7 +3,11 @@ body {
   background-color: rgb(174, 216, 233);
 }
 
+header {
+  height: 64px;
+}
 .title {
+  text-align: center;
   font-family: 'Suwannaphum', serif;
 }
 
