@@ -49,8 +49,8 @@ let click = (color) => {
   createColorElement(color).classList.add('selected');
   setTimeout(() => {
     createColorElement(color).classList.remove('selected');
-  })
-  checkOrder();
+    checkOrder();
+  }, 250);
 }
 
 let createColorElement = (color) => {
@@ -78,6 +78,13 @@ let gameOver = () => {
 }
 
 let playGame = () => {
-  alert();
+  alert('Bem-vindo ao Gênesis! Iniciando novo jogo');
   score = 0;
+  nextLevel();
 }
+
+green.onClick = () => click[0];
+red.onClick = () => click[1];
+yellow.onClick = () => click[2];
+blue.onClick = () => click[3];
+playGame();
