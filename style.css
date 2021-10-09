@@ -69,10 +69,19 @@ header {
 
 footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: rgb(60, 64, 74);
   height: 60px;
   color: white;
   justify-content: center;
-  align-items: center;
 }
 
+.links {
+  align-self: center;
+}
+
+.link-a, .link-b {
+  margin: 5px;
+  text-decoration: none;
+}
