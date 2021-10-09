@@ -32,3 +32,37 @@ let lightColor = (element, number) => {
   },);
 }
 
+let checkOrder = () => {
+  for (let i in clickedOrder ) {
+    if (clickedOrder[i] !== order[i]) {
+      lose();
+      break;
+    }
+  } if (clickedOrder.length == order.length) {
+    alert('Pontuação: $(score)\nVocê acertou! Iniciando próximo nível! ');
+    nextLevel();
+  }
+}
+
+let click = (color) => {
+  clickedOrder[clickedOrder.length] = color;
+  createColorElement(color).classList.add('selected');
+  setTimeout(() => {
+    createColorElement(color).classList.remove('selected');
+  })
+  checkOrder();
+}
+
+let createColorElement = (color) => {
+  if(color == 0) {
+    return green;
+  } else if(color == 1) {
+    return red;
+  } else if(color == 2) {
+    return yellow; 
+  } else if(color ==3) {
+    return blue;
+  }
+}
+
+
