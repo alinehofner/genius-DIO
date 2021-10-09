@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(174, 216, 233);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(50, 167, 145);
+  height: 64px;
+}
+.title {
+  text-align: center;
+  color: #fff;
+  font-family: 'Suwannaphum', serif;
+}
+
+.main-game {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas: 'verde vermelho'
+  'amarelo azul';
+  grid-gap: 10px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+}
+
+.blue {
+  grid-area: azul;
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+
+.red {
+  grid-area: vermelho;
+  background-color: red;
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: amarelo;
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+}
+
+.green {
+  grid-area: verde;
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+
+.selected {
+  opacity: 0.4;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(60, 64, 74);
+  height: 60px;
+  color: white;
+  justify-content: center;
+}
+
+.links {
+  align-self: center;
+}
+
+.link-a, .link-b {
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+}
