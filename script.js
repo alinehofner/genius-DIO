@@ -33,12 +33,12 @@ let lightColor = (element, number) => {
 }
 
 let checkOrder = () => {
-  for (let i in clickOrder ) {
+  for (let i in clickedOrder ) {
     if (clickedOrder[i] != order[i]) {
       gameOver();
       break;
     }
-  } if (clickOrder.length == order.length) {
+  } if (clickedOrder.length == order.length) {
     alert(`Pontuação: $(score)\nVocê acertou! Iniciando próximo nível! `);
     nextLevel();
   }
@@ -83,8 +83,10 @@ let playGame = () => {
   nextLevel();
 }
 
-green.onClick = () => click(0);
-red.onClick = () => click(1);
-yellow.onClick = () => click(2);
-blue.onClick = () => click(3);
+window.onload = () => {
+  green.addEventListener('click', click(0));
+  red.addEventListener = ('click', click(1));
+  yellow.addEventListener = () => click(2);
+  blue.addEventListener = () => click(3);
+}
 playGame();
